@@ -1,0 +1,215 @@
+<!doctype html>
+<html class="h-100" lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head th:include="fragments :: head">
+    <title id="pageTitle">Đánh Răng Thường Ngày Liệu Đã Đủ?</title>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+
+<nav id="navScroll" class="navbar navbar-expand-lg navbar-light" tabindex="0">
+    <div class="container ">
+        <a class="navbar-brand pe-4 fs-4" href="/">
+            <img src="/img/icon.jpg" alt="favicon" height="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
+                        Trang Chủ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutus">
+                        Sản phẩm
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#numbers">
+                        Thông tin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">
+                        Về chúng tôi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#workwithus">
+                        Đánh giá
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+            <a sec:authorize="isAnonymous()" href="dang-nhap" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2"> Đăng Nhập
+            </a>
+            <a sec:authorize="isAuthenticated()" href="#" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' + ${lastname} ">
+
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="py-vh-5 w-100 overflow-hidden" id="services">
+        <div class="container content-blog">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <h1 class="display-1 fw-bold border-bottom border-dark pb-4">Đánh Răng Thường Ngày Liệu Đã Đủ?
+                    </h1>
+                    <p class="lead py-vh-2 d-flex justify-content-end">Ngày đăng 28-11-2022</p>
+                    <p class="lead py-vh-2">Sức khỏe răng miệng phản ánh trực tiếp hay gián tiếp sức khỏe toàn trạng của một cá
+                        nhân, do đó, việc chăm sóc răng miệng là hết sức quan trọng. Trong đó, đánh răng bằng bàn chải là phương
+                        pháp đơn giản và dễ thực hiện nhất để duy trì hàm răng trắng khỏe.</p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-1.jpg" style="width:70% ;margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12">
+                    <p>Bàn chải đánh răng là một vật dụng hỗ trợ vệ sinh răng miệng được sử dụng phổ biến. Đây là công cụ giúp
+                        loại bỏ mảng bám, mảnh vụn thức ăn, làm sạch răng từ đó làm giảm khả năng viêm nướu, giảm số lượng vi sinh
+                        vật trong khoang miệng và các mầm bệnh khác. Tuy nhiên, chức năng của bàn chải sẽ không được duy trì tối
+                        đa nếu chúng ta không chú ý đến thời hạn sử dụng của nó.
+                    </p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-1-v1.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12">
+                    <h4>Chúng ta nên dùng bàn chải trong bao lâu?</h4>
+                    <p>Nhiều người lầm tưởng rằng, có thể sử dụng bàn chải đến khi các sợi lông tòe ra rồi mới thay. Thật ra,
+                        bàn chải trong quá trình sử dụng sẽ dần dần tích tụ vi khuẩn. Khi đánh răng bằng những bàn chải đã sử dụng
+                        lâu ngày, vi khuẩn từ bàn chải có thể đi vào môi trường miệng và sẽ âm thầm gây ra những bệnh lý răng
+                        miệng và bệnh lý toàn thân. Có thể thấy, việc đánh răng trông đơn giản nhưng lại không hề giản đơn một
+                        chút nào.
+
+                    </p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet1-v2.jpg" style="width:70% ;margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <p>
+                        Tuổi thọ trung bình của bàn chải đánh răng bằng tay là khoảng 3 tháng. Nếu một người chải răng trong 2
+                        phút, hai lần một ngày, thì 3 tháng có thể tương đương với khoảng 500 phút chải răng. Do đó, Hiệp hội Nha
+                        khoa Hoa Kỳ (ADA) khuyến nghị thay bàn chải đánh răng 3-4 tháng một lần.
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h4>Tại sao chúng ta phải thay bàn chải 3 tháng/ lần?</h4>
+                    <h5 class="mt-4">1. Giảm nguy cơ nhiễm khuẩn</h5>
+                    <p>Vi khuẩn răng miệng lành mạnh sống trong miệng có thể làm hỏng răng và nướu của chúng ta nếu chúng không
+                        được loại bỏ thường xuyên bằng cách vệ sinh răng miệng như đánh răng. Thật không may, việc đánh răng để
+                        lại những vi khuẩn này trong lông bàn chải, nơi chúng có thể sinh sôi. Để đảm bảo bàn chải đánh răng của
+                        bạn có thể loại bỏ vi khuẩn trong miệng một cách hiệu quả, hãy đảm bảo rằng bạn rửa sạch lông bàn chải sau
+                        mỗi lần sử dụng và đổi bàn chải đánh răng ít nhất 3 tháng một lần.
+                    </p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-1-v3.jpg" style="width:70% ;margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h5>2. Sử dụng bàn chải cũ đã mòn và tòe lông không có hiệu quả</h5>
+                    <p>Sau nhiều tháng sử dụng, lông bàn chải đánh răng sẽ bị mòn và cong vênh, trở nên kém hiệu quả hơn trong
+                        việc loại bỏ các mảng bám và thức ăn thừa trong miệng.
+                    </p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-1-v4.jpg" style="width:70% ;margin-bottom:40px ;">
+                </div>
+                <div class="ccol-md-12 mt-4">
+                    <h5>3. Lông bàn chải đã mòn có thể làm hỏng men răng và tổn thương nướu
+                    </h5>
+                    <p>Lông bàn chải được thiết kế để dễ dàng loại bỏ đi những mảnh vụn thức ăn. Khi chúng đã mòn, đồng nghĩa
+                        mới việc khả năng loại bỏ mảng bám giảm đi đáng kể. Hơn thế nữa, đầu lông bị tòe sẽ cọ xát mạnh hơn và làm
+                        tổn thương đến men răng và nướu của bạn, có thể gây chảy máu.
+                    </p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-1-v5.jpg" style="width:70% ;margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h5>4. Tránh tiếp xúc với nấm, mốc và vi sinh vật
+                    </h5>
+                    <p>Ngoài vi khuẩn đường miệng, bàn chải còn tích đọng số lượng lớn vi sinh vật ở môi trường bên ngoài. Khi
+                        đánh răng, khả năng cao bạn sẽ tiếp xúc với chúng và ảnh hưởng đến sức khỏe tổng trạng. Để tránh trường
+                        hợp này, hãy chú ý thay bàn chài mỗi 3 tháng và giữ bàn chải luôn khô ráo, tránh những nơi ẩm ướt và hạn
+                        chế để ở nhà vệ sinh.
+                    </p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-1-v6.jpg" style="width:70% ;margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <p>Vì vậy, chúng ta cần tạo thói quen thay bàn chải của mình mỗi 3 tháng một lần để luôn giữ được nụ cười
+                        trắng sáng. Nếu cảm tshấy việc ghi nhớ thói quen này chưa dễ dàng, hãy để Oral Care (oralcare.com) tư vấn
+                        và nhắc nhở bạn.
+                    </p>
+                    <hr>
+                    <ul>
+                        Tài Liệu Tham Khảo
+                        <li>Karibasappa, G. N., Nagesh, L., & Sujatha, B. K. (2011). Assessment of microbial contamination of
+                            toothbrush head: An in vitro study. Indian Journal of Dental Research, 22(1), 2.</li>
+                        <li>Al-Naimi, R. J. (2009). Evaluation of Toothbrush Wear on Toothbrushing Efficiency. Al-Rafidain Dental
+                            Journal, 9(1), 51-56.
+                        </li>
+                        <li>Van Leeuwen, M. P., Van der Weijden, F. A., Slot, D. E., & Rosema, M. A. (2019). Toothbrush wear in
+                            relation to toothbrushing effectiveness. International journal of dental hygiene, 17(1), 77-84.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer th:replace="fragments :: footer">
+
+</footer>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+    });
+</script>
+
+<script>
+    let scrollpos = window.scrollY
+    const header = document.querySelector(".navbar")
+    const header_height = header.offsetHeight
+
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+
+    window.addEventListener('scroll', function () {
+        scrollpos = window.scrollY;
+
+        if (scrollpos >= header_height) {
+            add_class_on_scroll()
+        } else {
+            remove_class_on_scroll()
+        }
+
+        console.log(scrollpos)
+    })
+</script>
+
+</body>
+</html>

@@ -99,6 +99,6 @@ public class ClientController {
             emailService.replyMailContact(contact.getEmail());
             return "success";
         } else
-            return "404";
+            return "error";
     }
 }

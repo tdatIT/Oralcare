@@ -1,0 +1,263 @@
+<!doctype html>
+<html class="h-100" lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head th:include="fragments :: head">
+    <title id="pageTitle">Bí Mật Cách Sử Dụng Kem Đánh Răng Chuẩn Nha Sĩ </title>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+
+<nav id="navScroll" class="navbar navbar-expand-lg navbar-light" tabindex="0">
+    <div class="container ">
+        <a class="navbar-brand pe-4 fs-4" href="/">
+            <img src="/img/icon.jpg" alt="favicon" height="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
+                        Trang Chủ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutus">
+                        Sản phẩm
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#numbers">
+                        Thông tin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">
+                        Về chúng tôi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#workwithus">
+                        Đánh giá
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+            <a sec:authorize="isAnonymous()" href="dang-nhap" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2"> Đăng Nhập
+            </a>
+            <a sec:authorize="isAuthenticated()" href="#" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' + ${lastname} ">
+
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="py-vh-5 w-100 overflow-hidden" id="services">
+        <div class="container content-blog">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <h1 class="display-1 fw-bold border-bottom border-dark pb-4">“Bí Mật” Cách Sử Dụng Kem Đánh Răng
+                        Chuẩn Nha Sĩ
+                    </h1>
+                    <p class="lead py-vh-2 d-flex justify-content-end">Ngày đăng 28-11-2022</p>
+                    <p class="lead py-vh-2">Đối với mỗi chúng ta, kem đánh răng đã trở thành vật dụng thân thuộc mỗi
+                        khi chúng ta chăm sóc răng miệng. Vậy bạn đã hiểu rõ công dụng cũng như cách sử dụng kem đánh
+                        răng chuẩn nha sĩ chưa. Mời các bạn tham khảo bài viết bên dưới về kem đánh răng nhé.
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h4>Vai trò của kem đánh răng trong chăm sóc răng miệng</h4>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-4-v1.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+
+                    <p>
+                        Ông bà ta thường nói cái răng cái tóc là góc con người. Ngày nay, khi xã hội ngày càng phát
+                        triển, nhu cầu về thẩm mỹ và sức khỏe răng miệng trở nên rất quan trọng. Trong quá trình ấy
+                        không thể không kể đến vai trò của kem đánh răng.<br>
+                        Đánh răng thường xuyên và đúng cách bằng kem đánh răng là lời khuyên của mọi nha sĩ cho bệnh
+                        nhân của mình. Trong bối cảnh hiện nay có rất nhiều kem đánh răng trên thị trường. Vậy thì bạn
+                        có khả năng nhận biết đâu là kem đánh răng có chất lượng tốt. Để có được kiến thức trên hãy tìm
+                        hiểu một chút về thành phần của kem đánh răng nhé.
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h4>Đặc điểm thành phần và công dụng của kem đánh răng</h4>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-4-v2.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <p>Vì sao kem đánh răng lại có công dụng làm sạch răng và bảo vệ răng trước các loại vi khuẩn. Kem
+                        đánh răng có tác dụng như vậy là nhờ các hợp chất sau
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h5 class="mt-4">Xylitol - ngăn mảng bám</h5>
+                    <p>
+                        Xylitol được coi là thành phần quan trọng nhất của kem đánh răng. Hầu như tất cả các công dụng
+                        có lợi của kem đánh răng đều phụ thuộc vào thành phần này. Cụ thể Xylitol giúp ngăn cản các mảng
+                        bám tồn tại trên răng qua đó giúp ngăn ngừa sâu răng.
+                    </p>
+                    <p>Ngoài ra nó còn được thay thế cho đường nhằm tạo vị ngọt vừa phải và an toàn cho răng miệng. Vị
+                        này giúp chúng ta đánh răng dễ chịu và thoải mái hơn.
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h5 class="mt-4">Acid Citric - đánh bay cao răng</h5>
+                    <p>
+                        Cao răng - hay một số nơi còn gọi là vôi răng - là một thành phần góp phần quan trọng trong bệnh
+                        viêm nướu cũng như sâu răng. Do đó thành phần acid citric trong kem đánh răng rất quan trọng để
+                        đánh bay loại vôi khó chịu này.
+                    </p>
+
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h5 class="mt-4">Các thành phần tạo mùi dễ chịu</h5>
+                    <p>
+                        Bên cạnh các thành phần cơ bản, nhà sản xuất thường trộn thêm một số mùi hoa quả dễ chịu nhằm
+                        kích thích việc đánh răng. Đặc biệt với trẻ nhỏ, nếu kem đánh răng quá cay thì sẽ làm trẻ sợ và
+                        không chịu đánh răng từ đó ảnh hưởng đến sức khỏe răng miệng
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h4>Một số loại kem đánh răng thông dụng trên thị trường</h4>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <p>Ngày nay có rất nhiều loại kem đánh răng trên thị trường từ giá thành rẻ đến mắc. Tuy nhiên trong
+                        việc chăm sóc răng miệng giá cả không phải là điều tiên quyết. Vậy đâu là loại kem đánh răng mà
+                        bạn nên sử dụng.
+                    </p>
+                </div>
+                <!--Kem-->
+                <div class="col-md-12 mt-4">
+                    <h5 class="mt-4">Kem đánh răng P/S</h5>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/kem-ps.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <p>
+                        P/S hẳn không còn quá xa lạ với nhiều người là một trong những thương hiệu về chăm sóc răng
+                        miệng nổi tiếng thế giới. Khi sử dụng kem đánh răng P/S còn đem lại cho chúng ta cảm giác yên
+                        tâm.<br>
+                        Ngoài ra P/S hiện đang có rất nhiều mẫu về kem đánh răng khác nhau. Bạn có thể thoải mái lựa
+                        chọn loại kem bàn chải phù hợp với tình trạng sức khỏe răng miệng của mình. Nếu đang băn khoăn
+                        sức khỏe răng miệng của mình đang ở đâu hãy tham gia ngay dịch vụ tư vấn tại <a href="/">oralcare.one</a>
+                        để được hỗ trợ từ các bạn sinh viên Răng Hàm Mặt.
+
+                    </p>
+                </div>
+                <!--Kem-->
+                <div class="col-md-12 mt-4">
+                    <h5 class="mt-4">Kem đánh răng P/S</h5>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/kem-colgate.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <p>
+                        Nhắc đến P/S thì không thể không đề cập về Colgate. Được xem như là trận chiến Pepsi và Coca
+                        phiên bản chăm sóc răng miệng. Hai công ty lớn về bàn chải và kem đánh răng này luôn là lựa chọn
+                        hàng đầu cho khách hàng.<br>
+                        Hiện tại Colgate cũng sở hữu rất nhiều loại kem đánh răng khác nhau. Bạn có thể lựa chọn tuỳ
+                        theo mùi vị hoặc công dụng phù hợp với bản thân
+
+                    </p>
+                </div>
+                <!--Kem-->
+                <div class="col-md-12 mt-4">
+                    <h5 class="mt-4">Kem đánh răng Sensodyne</h5>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/kem-sensodyne.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <p>
+                        Là một loại kem đánh răng sinh sau đẻ muộn nhưng Sensodyne vẫn biết cách chiếm trọn niềm tin từ
+                        khách hàng. Đánh vào thị phần cải thiện tình trạng ê buốt răng miệng. Sensodyne đã thành công
+                        khi đã cạnh tranh được với cả P/S và Colgate.<br>
+                        Nếu bạn có tình trạng ê buốt răng miệng nghiêm trọng. Lời khuyên của chúng tôi là nên sử dụng
+                        thử Sensodyne nhé.
+                    </p>
+                </div>
+                <!--Kem-->
+                <div class="col-md-12 mt-4">
+                    <h5 class="mt-4">Kem đánh răng CloseUp</h5>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/kem-closeup.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <p>
+                        Thành lập vào năm 1967 - là đứa con cưng trong phân khúc sản phẩm chăm sóc răng miệng của tập
+                        đoàn Unilever. CloseUp đã và đang trở thành nhãn hàng có tiếng nói nhất. Bên cạnh P/S hay
+                        Colgate thì đây hẳn là một sự lựa chọn thích hợp cho người thích trải nghiệm những điều mới mẻ.
+                    </p>
+                </div>
+
+                <div class="col-md-12 mt-4">
+                    <h4>Kết luận</h4>
+                    <p>CĐọc đến đây hi vọng bạn đã có cái nhìn khách quan hơn về kem đánh răng cũng như tác dụng của
+                        chúng. Ngoài ra việc thay đổi bàn chải thường xuyên cũng rất quan trọng. Tham gia ngay chương
+                        trình “Cung Cấp - Thay Mới Bàn Chải Sau Mỗi Ba Tháng” cùng nhiều ưu đãi hấp dẫn khác tại
+                        <a href="/">oralcare.com</a>
+                    </p>
+                    <hr>
+                    <p>Tác giả: Oralcare</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer th:replace="fragments :: footer">
+
+</footer>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+    });
+</script>
+
+<script>
+    let scrollpos = window.scrollY
+    const header = document.querySelector(".navbar")
+    const header_height = header.offsetHeight
+
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+
+    window.addEventListener('scroll', function () {
+        scrollpos = window.scrollY;
+
+        if (scrollpos >= header_height) {
+            add_class_on_scroll()
+        } else {
+            remove_class_on_scroll()
+        }
+
+        console.log(scrollpos)
+    })
+</script>
+
+</body>
+</html>

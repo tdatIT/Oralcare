@@ -1,0 +1,194 @@
+<!doctype html>
+<html class="h-100" lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head th:include="fragments :: head">
+    <title id="pageTitle">Cấu Tạo, Ưu Điểm Của Bàn Chải Thường Và Bàn Chải Điện</title>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+
+<nav id="navScroll" class="navbar navbar-expand-lg navbar-light" tabindex="0">
+    <div class="container ">
+        <a class="navbar-brand pe-4 fs-4" href="/">
+            <img src="/img/icon.jpg" alt="favicon" height="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
+                        Trang Chủ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutus">
+                        Sản phẩm
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#numbers">
+                        Thông tin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">
+                        Về chúng tôi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#workwithus">
+                        Đánh giá
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+            <a sec:authorize="isAnonymous()" href="dang-nhap" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2"> Đăng Nhập
+            </a>
+            <a sec:authorize="isAuthenticated()" href="#" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' + ${lastname} ">
+
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="py-vh-5 w-100 overflow-hidden" id="services">
+        <div class="container content-blog">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <h1 class="display-1 fw-bold border-bottom border-dark pb-4">Cấu Tạo, Ưu Điểm Của Bàn Chải Thường Và
+                        Bàn Chải Điện
+                    </h1>
+                    <p class="lead py-vh-2 d-flex justify-content-end">Ngày đăng 28-11-2022</p>
+                    <p class="lead py-vh-2">Xã hội càng phát triển thì chúng ta càng chú trọng đến cái đẹp nhiều hơn.
+                        Trong đó, chăm sóc răng miệng cũng đặc biệt được quan tâm. Việc lựa chọn bàn chải đánh răng phù
+                        hợp là điều hết sức quan trọng.
+                        Trên thị trường hiện nay có hàng trăm hàng nghìn loại bàn chải khác nhau,
+                        tuy nhiên có lẽ vấn đề các bạn bâng khuâng là không biết loại bàn chải đánh răng nào sẽ tốt và
+                        sẽ là sự lựa chọn hoàn hảo cho răng miệng của mình.
+                        <p>Có 2 loại bàn chải thông dụng: bàn chải thường và bàn chải điện. Hãy cùng
+                        tìm hiểu về cấu tạo cũng như ưu điểm của từng loại bàn chải với Oralcare nhé.<p>
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h4>Bàn chải thường</h4>
+                    <h5 class="mt-4">1. Cấu tạo</h5>
+                    <p>Gồm một đầu lông nhỏ gắn liền với cán, thường được làm bằng chất liệu nhựa. Sợi lông của bàn chải
+                        mềm, nhiều kích thước và hình dạng khác nhau để người dùng lựa chọn.
+                    </p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-2-v1.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h5 class="mt-4">2. Ưu điểm</h5>
+                    <p>- Dễ tìm, dễ mua: có thể dễ dàng tìm mua ở nhiều nơi, từ cửa hàng tiện lợi, tạp hoá cho đến các
+                        hệ thống siêu thị lớn bởi sự tiện lợi và phổ biến của chúng.
+                    </p>
+                    <p>- Giá thành phải chăng: giá rẻ hơn rất nhiều so với bàn chải điện, chỉ với vài chục nghìn là bạn
+                        đã có thể sở hữu một chiếc bàn chải ưng ý.</p>
+                    <p>- Đa dạng mẫu mã: thường có nhiều kiểu dáng, màu sắc nên người dùng dễ dàng lựa chọn theo sở
+                        thích.</p>
+                    <p>- Dễ thay thế: Với giá thành rẻ, người dùng có thể dễ dàng thay thế bàn chải định kỳ để đảm bảo
+                        hiệu quả làm sạch răng hoặc khi bị hư hỏng.
+                    </p>
+                    <p>Các loại bàn chải thường thông dụng: Bàn chải P/S Bảo vệ 1 2 3, Oral-B Easy Clean, Oral-B Pro
+                        Health, Colgate siêu mềm mảnh, P/S Chuyên gia chải dọc, Colgate Flex Clean.
+                    </p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-2-v1.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h4>Bàn chải điện</h4>
+                    <h5 class="mt-4">1. Cấu tạo</h5>
+                    <p>- Loại bỏ mảng bám hiệu quả: Bàn chải điện sử dụng chuyển động xoay giúp làm giảm mảng bám và
+                        viêm nướu hiệu quả hơn so với dùng bàn chải thông thường.
+                    </p>
+                    <p>- Phù hợp với nhiều đối tượng: Bàn chải điện có thể tự động thực hiện các thao tác làm sạch răng
+                        mà không cần quá nhiều lực của tay nên thích hợp dùng cho mọi đối tượng.
+                    </p></div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-2-v2.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h5 class="mt-4">2. Ưu điểm</h5>
+                    <p>
+                        - Tích hợp công nghệ hiện đại: Thiết bị thường được tích hợp công nghệ sóng âm Sonic hoặc sóng
+                        siêu âm Ultrasonic, cung cấp các chuyển động vòng tròn, quay, rung lắc và dao động bên làm sạch
+                        răng hiệu quả.
+                    </p>
+                    <p>- Tiết kiệm thời gian: Sử dụng bàn chải điện giúp đánh răng nhanh và sạch hơn. Ngoài ra, chế độ
+                        hẹn giờ của sản phẩm cũng giúp bạn kiểm soát được thời gian chải răng.
+                    </p>
+                    <p>- An toàn cho nướu: Khi dùng bàn chải đúng cách, nướu và men răng sẽ không bị tổn thương. Từ đó,
+                        sức khoẻ răng miệng sẽ được cải thiện tốt hơn.</p>
+                    <p>- Đem đến cảm giác mới lạ: Việc dùng bàn chải điện mang lại cảm giác thích thú khi đánh răng, tạo
+                        động lực cho người dùng chăm sóc răng miệng đầy đủ và tạo thói quen tốt.</p>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/img/bai-viet-2-v3.jpg" style="width:70% ; margin-bottom:40px ;">
+                </div>
+
+                <div class="col-md-12 mt-4">
+                    <p>Các loại bàn chải điện thông dụng: Bàn chải đánh răng điện Oral-B Pro, Kemei KM-907 Bàn Chải Điện
+                        Sóng Siêu Âm, Philips Sonicare Bàn Chải Điện Sóng Âm, Bàn Chải Điện Dùng Pin Panasonic, Bàn chải
+                        điện Colgate cho trẻ em.
+                    </p>
+                    <hr>
+                    <p>Tác giả: Oralcare</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer th:replace="fragments :: footer">
+
+</footer>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+    });
+</script>
+
+<script>
+    let scrollpos = window.scrollY
+    const header = document.querySelector(".navbar")
+    const header_height = header.offsetHeight
+
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+
+    window.addEventListener('scroll', function () {
+        scrollpos = window.scrollY;
+
+        if (scrollpos >= header_height) {
+            add_class_on_scroll()
+        } else {
+            remove_class_on_scroll()
+        }
+
+        console.log(scrollpos)
+    })
+</script>
+
+</body>
+</html>

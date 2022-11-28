@@ -35,3 +35,10 @@
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
 }
+.content-blog{
+    font-size: 20px;
+}
+.doc-them{
+    font-size: 20px;
+    font-weight: 200;
+}

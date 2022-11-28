@@ -472,7 +472,7 @@ progress {
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.25rem; }
+  font-size: 16px; }
   .blockquote > :last-child {
     margin-bottom: 0; }
 

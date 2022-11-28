@@ -1,0 +1,187 @@
+<!doctype html>
+<html class="h-100" lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head th:include="fragments :: head">
+    <title id="pageTitle">Cách Sử Dụng Chỉ Nha Khoa Cơ Bản</title>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+
+<nav id="navScroll" class="navbar navbar-expand-lg navbar-light" tabindex="0">
+    <div class="container ">
+        <a class="navbar-brand pe-4 fs-4" href="/">
+            <img src="/img/icon.jpg" alt="favicon" height="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
+                        Trang Chủ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutus">
+                        Sản phẩm
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#numbers">
+                        Thông tin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">
+                        Về chúng tôi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#workwithus">
+                        Đánh giá
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+            <a sec:authorize="isAnonymous()" href="dang-nhap" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2"> Đăng Nhập
+            </a>
+            <a sec:authorize="isAuthenticated()" href="#" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' + ${lastname} ">
+
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="py-vh-5 w-100 overflow-hidden" id="services">
+        <div class="container content-blog">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <h1 class="display-1 fw-bold border-bottom border-dark pb-4">Cách Sử Dụng Chỉ Nha Khoa Cơ Bản
+                    </h1>
+                    <p class="lead py-vh-2 d-flex justify-content-end">Ngày đăng 28-11-2022</p>
+                    <p class="lead py-vh-2">Sử dụng tăm chỉ nha khoa được chuyên gia răng miệng khuyên dùng để ngăn ngừa
+                        mảng bám, giảm nguy cơ mắc bệnh về nha chu chu và sâu răng. Thị trường hiện nay, chỉ nha khoa có
+                        nhiều loại. Tùy thuộc sở thích, khoảng cách giữa các răng và bạn có niềng răng hay cầu răng hay
+                        không để chọn loại chỉ nha khoa phù hợp.
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h4>Phân loại</h4>
+                    <ul>Hiện nay, có hai dạng chỉ nha khoa chính là:
+                        <li>Chỉ nha khoa dạng cuộn: đó là một sợi nylon mỏng, có thể nằm gọn trong kẽ răng.
+
+                        </li>
+                        <div class="col-md-12 d-flex justify-content-center mt-2">
+                            <img src="/img/bai-viet-3-v1.jpg" style="width:70% ; margin-bottom:40px ;">
+                        </div>
+                        <li>
+                            Tăm chỉ nha khoa: sợi chỉ ngắn được cố định trên một cung nhỏ hình chữ C để cầm.
+                            <div class="col-md-12 d-flex justify-content-center mt-2">
+                                <img src="/img/bai-viet-3-v2.jpg" style="width:70% ; margin-bottom:40px ;">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h4>Cách sử dụng</h4>
+                    <h5>Đối với chỉ nha khoa dạng cuộn, có thể cắt theo ý muốn, cách xài chỉ nha khoa dạng cuộn gồm các
+                        bước cụ thể như sau:</h5>
+                    <ul>
+                        <li>Bước 1: Cắt khoảng 45 đến 60 cm chỉ nha khoa. Quấn chỉ xung quanh 2 ngón tay trỏ và điều
+                            khiển sợi chỉ nha khoa bằng ngón tay cái và ngón trỏ.
+                        </li>
+                        <div class="col-md-12 d-flex justify-content-center mt-2">
+                            <img src="/img/bai-viet-3-v3.jpg" style="width:70% ; margin-bottom:40px ;">
+                        </div>
+                        <li>
+                            Bước 2: Đặt chỉ nha khoa vào giữa hai răng. Nhẹ nhàng lướt sợi chỉ nha khoa lên xuống, chà
+                            xát vào cả hai mặt của mỗi kẽ răng để loại bỏ mảng bám và thức ăn thừa. Bạn nên thao tác nhẹ
+                            nhàng để tránh làm tổn thương nướu.
+                        </li>
+                        <li>
+                            Bước 3: Lặp lại các bước như trên sang răng khác. Với mỗi kẽ răng, tịnh tiến một đoạn chỉ
+                            nha khoa mới và sạch.
+                        </li>
+                        <li>
+                            Bước 4: Nâng nhẹ sợi chỉ nha khoa ra khỏi kẽ răng, sau đó, sử dụng nước hoặc dung dịch súc
+                            miệng sau khi dùng chỉ nha khoa để đảm bảo loại bỏ hoàn toàn thức ăn thừa.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h5>Với tăm chỉ nha khoa, bạn thực hiện vệ sinh răng theo các bước sau:</h5>
+                    <ul>
+                        <li>Bước 1: Bạn dùng các ngón tay giữ thân cây tăm và cho đầu tăm vào các kẽ răng.
+                        </li>
+                        <div class="col-md-12 d-flex justify-content-center mt-2">
+                            <img src="/img/bai-viet-3-v4.jpg" style="width:70% ; margin-bottom:40px ;">
+                        </div>
+                        <li>
+                            Bước 2: Quay đầu tăm lại, dùng đầu nhọn xỉa vào kẽ răng để loại bỏ thức ăn thừa, các mảng
+                            bám.
+                        </li>
+                        <li>
+                            Bước 3: Súc miệng nước nước hoặc dung dịch súc miệng để để loại bỏ vi khuẩn và cao răng còn
+                            thừa
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-12 mt-4 justify-content-end">
+                    <hr>
+                    <p>Tác giả: Oralcare</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer th:replace="fragments :: footer">
+
+</footer>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+    });
+</script>
+
+<script>
+    let scrollpos = window.scrollY
+    const header = document.querySelector(".navbar")
+    const header_height = header.offsetHeight
+
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+
+    window.addEventListener('scroll', function () {
+        scrollpos = window.scrollY;
+
+        if (scrollpos >= header_height) {
+            add_class_on_scroll()
+        } else {
+            remove_class_on_scroll()
+        }
+
+        console.log(scrollpos)
+    })
+</script>
+
+</body>
+</html>

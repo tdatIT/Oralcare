@@ -1,0 +1,37 @@
+.title-oralcare,
+.nav-link {
+    color: #12154C;
+}
+
+.btn-scroll {
+    background-color: #12154C;
+    color: #FCF9F0;
+}
+
+#services,
+#project {
+    color: #12154C;
+}
+
+.value-description {
+    font-weight: 400;
+}
+
+#navbarSupportedContent {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.person {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.content {
+    font-family: "Inter", system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}

@@ -3,10 +3,11 @@ package com.oralcare.webapp.model;
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -26,7 +27,7 @@ public class Order {
     private String address;
     @Basic
     @Column(name = "createDate", nullable = false)
-    private Timestamp createDate;
+    private Timestamp createDate = new Timestamp(new Date().getTime());
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false,
             updatable = false, insertable = false)
@@ -35,7 +36,7 @@ public class Order {
     @JoinColumn(name = "sub_id", referencedColumnName = "sub_id",
             updatable = false, insertable = false)
     private Subscription subscriptionBySubId;
-    @OneToMany(mappedBy = "orderByOrderId")
+    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private Collection<OrderItems> orderItemsByOrderId;
 
     public int getOrderId() {

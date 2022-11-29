@@ -11,21 +11,17 @@ public class OrderItems {
     @Column(name = "item_id", nullable = false)
     private int itemId;
     @Basic
-    @Column(name = "order_id", nullable = false)
-    private int orderId;
-    @Basic
     @Column(name = "product_id", nullable = false)
     private int productId;
     @Basic
     @Column(name = "quantity", nullable = false)
     private int quantity;
     @ManyToOne
-    @JoinColumn(name = "order_id", referencedColumnName = "order_id",
-            nullable = false,updatable = false,insertable = false)
-    private Order orderByOrderId;
+    @JoinColumn(name="order_id")
+    private Order order;
     @ManyToOne
     @JoinColumn(name = "product_id", referencedColumnName = "product_id", nullable = false,
-            updatable = false,insertable = false)
+            updatable = false, insertable = false)
     private Product productByProductId;
 
     public int getItemId() {
@@ -34,14 +30,6 @@ public class OrderItems {
 
     public void setItemId(int itemId) {
         this.itemId = itemId;
-    }
-
-    public int getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
     }
 
     public int getProductId() {
@@ -65,20 +53,20 @@ public class OrderItems {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         OrderItems that = (OrderItems) o;
-        return itemId == that.itemId && orderId == that.orderId && productId == that.productId && quantity == that.quantity;
+        return itemId == that.itemId && productId == that.productId && quantity == that.quantity;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(itemId, orderId, productId, quantity);
+        return Objects.hash(itemId, productId, quantity);
     }
 
-    public Order getOrderByOrderId() {
-        return orderByOrderId;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrderByOrderId(Order orderByOrderId) {
-        this.orderByOrderId = orderByOrderId;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public Product getProductByProductId() {

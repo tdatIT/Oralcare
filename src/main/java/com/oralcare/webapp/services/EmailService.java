@@ -10,7 +10,7 @@ public interface EmailService {
 
     String replyMailContact(String email);
 
-    String replyOrderMail(Order order);
+    String replyOrderMail(Order order,String name,String email);
 
     // Method
     // To send an email with attachment

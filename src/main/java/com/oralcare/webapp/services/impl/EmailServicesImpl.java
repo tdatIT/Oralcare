@@ -1,6 +1,7 @@
 package com.oralcare.webapp.services.impl;
 
 import com.oralcare.webapp.email.EmailDetails;
+import com.oralcare.webapp.email.EmailOrder;
 import com.oralcare.webapp.model.Order;
 import com.oralcare.webapp.services.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,8 +52,29 @@ public class EmailServicesImpl implements EmailService {
     }
 
     @Override
-    public String replyOrderMail(Order order) {
-        return null;
+    public String replyOrderMail(Order order, String name, String email) {
+        EmailDetails details = new EmailDetails();
+
+        EmailOrder emailOrder = new EmailOrder(order, name);
+        try {
+            // Creating a simple mail message
+            MimeMessage mimeMessage
+                    = javaMailSender.createMimeMessage();
+            MimeMessageHelper mimeMessageHelper =
+                    new MimeMessageHelper(mimeMessage, true);
+            mimeMessage.setFrom(sender);
+            mimeMessage.setContent(emailOrder.htmlContent(), "text/html; charset=UTF-8");
+            mimeMessageHelper.setTo(email);
+            mimeMessage.setSubject("Xác Nhận Đơn Hàng");
+            // Sending the mail
+            javaMailSender.send(mimeMessage);
+            return "Mail Sent Successfully...";
+        }
+        // Catch block to handle the exceptions
+        catch (Exception e) {
+            return "Error while Sending Mail";
+        }
+
     }
 
     @Override
@@ -60,8 +82,10 @@ public class EmailServicesImpl implements EmailService {
         // Try block to check for exceptions
         try {
             // Creating a simple mail message
+
             SimpleMailMessage mailMessage
                     = new SimpleMailMessage();
+
             // Setting up necessary details
             mailMessage.setFrom(sender);
             mailMessage.setTo(details.getRecipient());

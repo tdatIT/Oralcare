@@ -43,12 +43,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/",
-                        "/register",
-                        "/login",
-                        "/home",
-                        "/category",
-                        "/all-session",
-                        "/product").permitAll()
+                        "/dang-nhap",
+                        "/dang-ky",
+                        "/bai-viet"
+                        ).permitAll()
+                .antMatchers("/mua-san-pham",
+                        "/checkout-order",
+                        "/dat-hang-thanh-cong")
+                .authenticated()
                 .and()
                 .logout()
                 .invalidateHttpSession(true)

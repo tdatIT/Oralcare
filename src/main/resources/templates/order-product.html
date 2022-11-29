@@ -1,0 +1,261 @@
+<!doctype html>
+<html class="h-100" lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="utf-8">
+    <title id="pageTitle">Đặt Combo Sản Phẩm</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" sizes="96x96" th:href="@{/img/favicon.jpg}">
+    <link rel="stylesheet" th:href="@{/css/theme.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="/css/order.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+<nav id="navScroll" class="navbar navbar-expand-lg navbar-light" tabindex="0">
+    <div class="container ">
+        <a class="navbar-brand pe-4 fs-4" href="/">
+            <img src="/img/icon.jpg" alt="favicon" height="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
+                        Trang Chủ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutus">
+                        Sản phẩm
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#numbers">
+                        Thông tin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">
+                        Về chúng tôi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#workwithus">
+                        Đánh giá
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+            <a sec:authorize="isAnonymous()" href="dang-nhap" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2"> Đăng Nhập
+            </a>
+            <a sec:authorize="isAuthenticated()" href="#" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' + ${lastname} ">
+
+            </a>
+
+        </div>
+    </div>
+</nav>
+<main>
+    <div class=" w-100 overflow-hidden">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                        <!--Thong bao-->
+                        <div class="box">
+                            <h3 class="box-title">Hướng dẫn mua hàng</h3>
+                            <div class="plan-selection" >
+                                <div class="plan-data">
+                                    <label>Chúng mình bán các sản phẩm theo combo để tối ưu lợi ích sử dụng</label>
+                                    <p id="help" style="font-size: 16px;">
+                                        Các bạn sẽ chọn các sản phẩm theo các mục như chỉ nha khoa, bàn chải, kem đánh răng tạo thành 1
+                                        combo.
+                                        Điều này giúp tối ưu chi phí cũng như thời gian sử dụng nâng cao việc chăm sóc sức khỏe răng
+                                        miệng. ^_^
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Chi nha khoa-->
+                        <div class="box">
+                            <h3 class="box-title">Chỉ Nha Khoa</h3>
+                            <div class="plan-selection" >
+                                <div class="plan-data">
+                                    <select id="doanh-muc-1" class="product-select">
+                                        <option value="1-50000">Chỉ nha khoa Oral-B (50m) [50000 VND]</option>
+                                        <option value="2-21500">Tăm chỉ nha khoa Okamura Nhật Bản (50 cây) [21500 VND]</option>
+                                        <option value="3-33000">Tăm chỉ nha khoa Okamura Nhật Bản (90 cây) [33000 VND]</option>
+                                        <option value="0" selected hidden>Vui lòng chọn sản phẩm</option>
+                                    </select>
+                                    <p class="plan-text">
+                                        x 1
+                                        <span class="plan-price">
+                        0
+                      </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Ban chay danh rang-->
+                        <div class="box">
+                            <h3 class="box-title">Bàn Chảy Đánh Răng</h3>
+                            <div class="plan-selection" >
+                                <div class="plan-data">
+                                    <select id="doanh-muc-2" class="product-select">
+                                        <option value="0" selected hidden>Vui lòng chọn sản phẩm</option>
+                                        <option value="4-7000">Oral-B Easy Clean [7000 VND]</option>
+                                        <option value="5-13000">Bàn chải đánh răng P/S Bảo vệ 1 2 3 [13000 VND]</option>
+                                        <option value="6-20000">Colgate siêu mềm mảnh [20000 VND]</option>
+                                        <option value="7-52000">Colgate Flex Clean [52000 VND]</option>
+                                        <option value="8-58000">Bộ 3 bàn chải đánh răng P/S than bạc [58000 VND]</option>
+                                        <option value="9-42000">Bộ 2 bàn chải đánh răng P/S Muối tre [42000 VND]</option>
+                                        <option value="10-63000">Bộ 3 bàn chải đánh răng P/S Muối tre [63000 VND]</option>
+                                        <option value="11-57000">Bộ 2 bàn chải đánh răng P/S kháng khuẩn charcoal [57000 VND]</option>
+                                        <option value="12-65000">Bộ 2 bàn chải đánh răng P/S kháng khuẩn charcoal [65000 VND]</option>
+                                    </select>
+                                    <p class="plan-text">
+                                        x 1
+                                        <span class="plan-price">
+                      0
+                      </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Kem danh rang-->
+                        <div class="box">
+                            <h3 class="box-title">Kem đánh răng</h3>
+                            <div class="plan-selection" >
+                                <div class="plan-data">
+                                    <select id="doanh-muc-3" class="product-select">
+                                        <option value="0" selected hidden>Vui lòng chọn sản phẩm</option>
+                                        <option value="13-30000">Kem đánh răng P/S bảo vệ 123 than hoạt tính [30000 VND]</option>
+                                        <option value="14-97000">Kem đánh răng Sensodyne Rapid Action 100g [97000 VND]</option>
+                                        <option value="15-38000">Kem đánh răng Colgate MaxFresh hương bạc hà 180g [38000 VND]</option>
+                                        <option value="16-51000">Kem đánh răng Closeup trắng răng [51000 VND]</option>
+                                    </select>
+                                    <p class="plan-text">
+                                        x 1
+                                        <span class="plan-price">
+                        0
+                      </span>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Kem danh rang-->
+                        <div class="box">
+                            <h3 class="box-title">Số lượng combo</h3>
+                            <div class="plan-selection" >
+                                <div class="plan-data">
+                                    <input id="quantity" type="number" value="1" placeholder="Nhập vào số lượng bạn muốn mua" style="width:70% ;">
+                                    <p class="plan-text">
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Dat hang-->
+
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 position-fixed">
+                        <div class="widget">
+                            <h4 class="widget-title">Tổng số tiền thanh toán</h4>
+                            <div class="summary-block" id="chi-nha-khoa">
+                                <div class="summary-content">
+                                    <div class="summary-head">
+                                        <h5 class="summary-title">Mục Chỉ Nha Khoa</h5>
+                                    </div>
+                                    <div class="summary-price">
+                                        <p class="summary-text" id="price-1">0</p>
+                                        <span class="summary-small-text pull-right">VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary-block" id="ban-chay">
+                                <div class="summary-content">
+                                    <div class="summary-head">
+                                        <h5 class="summary-title">Mục bàn chảy đánh rắng</h5>
+                                    </div>
+                                    <div class="summary-price">
+                                        <p class="summary-text" id="price-2">0</p>
+                                        <span class="summary-small-text pull-right">VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary-block" id="kem-danh-rang">
+                                <div class="summary-content">
+                                    <div class="summary-head">
+                                        <h5 class="summary-title">Mục kem đánh răng</h5>
+                                    </div>
+                                    <div class="summary-price">
+                                        <p class="summary-text" id="price-3">0</p>
+                                        <span class="summary-small-text pull-right">VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-content">
+                                    <div class="summary-head">
+                                        <h5 class="summary-title">Số lượng combo</h5>
+                                    </div>
+                                    <div class="summary-price">
+                                        <p class="summary-text" id="quantity-total">1</p>
+                                        <span class="summary-small-text pull-right">combo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-content">
+                                    <div class="summary-head">
+                                        <h5 class="summary-title" >Tổng</h5>
+                                    </div>
+                                    <div class="summary-price">
+                                        <p class="summary-text" id="total">00000</p>
+                                        <span class="summary-small-text pull-right">VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-content">
+                                    <a id="checkout" class="btn btn-primary btn-lg mb30">Xác Nhận Đặt Hàng</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+<footer th:replace="fragments :: footer">
+
+</footer>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>

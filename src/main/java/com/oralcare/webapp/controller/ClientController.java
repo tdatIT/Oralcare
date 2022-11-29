@@ -6,6 +6,7 @@ import com.oralcare.webapp.model.User;
 import com.oralcare.webapp.services.ContactSerivce;
 import com.oralcare.webapp.services.EmailService;
 import com.oralcare.webapp.services.UserService;
+import com.oralcare.webapp.variable.VariableScope;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -37,6 +38,7 @@ public class ClientController {
             String lastname = ((CustomUserDetails) authentication.getPrincipal()).getLastName();
             modelMap.addAttribute("lastname", lastname);
         }
+        modelMap.addAttribute("count", VariableScope.count_request);
         return "index";
     }
 
@@ -47,7 +49,7 @@ public class ClientController {
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             return "login";
         }
-        return "redirect:/";
+        return "forward:/";
     }
 
 
@@ -60,7 +62,7 @@ public class ClientController {
             modelMap.addAttribute("register", user);
             return "register";
         } else
-            return "redirect:/";
+            return "forward:/";
     }
 
     @RequestMapping(value = "/dang-ky", method = RequestMethod.POST)

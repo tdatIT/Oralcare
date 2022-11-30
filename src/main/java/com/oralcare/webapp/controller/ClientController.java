@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
 import java.sql.Date;
 
 @Controller
@@ -31,12 +32,12 @@ public class ClientController {
     private ContactSerivce contactSerivce;
 
     @RequestMapping(value = {"/trang-chu", "/"}, method = RequestMethod.GET)
-    public String getHomePage(ModelMap modelMap) {
+    public String getHomePage(ModelMap modelMap, HttpSession session) {
         Authentication authentication = SecurityContextHolder
                 .getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)) {
-            String lastname = ((CustomUserDetails) authentication.getPrincipal()).getLastName();
-            modelMap.addAttribute("lastname", lastname);
+            String firstName = ((CustomUserDetails) authentication.getPrincipal()).getFirstName();
+            session.setAttribute("firstname", firstName);
         }
         modelMap.addAttribute("count", VariableScope.count_request);
         return "index";
@@ -98,7 +99,6 @@ public class ClientController {
         contact.setContent(content);
         contact.setEmail(email);
         if (contactSerivce.receiveContact(contact)) {
-            emailService.replyMailContact(contact.getEmail());
             return "success";
         } else
             return "error";

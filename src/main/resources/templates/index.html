@@ -25,8 +25,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/mua-san-pham">
+                    <a class="nav-link" href="/san-pham">
                         Sản phẩm
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mua-san-pham">
+                        Mua hàng
                     </a>
                 </li>
                 <li class="nav-item">
@@ -50,7 +55,7 @@
                class="link-dark pb-1 link-fancy me-2"> Đăng Nhập
             </a>
             <a sec:authorize="isAuthenticated()" href="#" aria-label="Download this template"
-               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' + ${lastname} ">
+               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' +  ${session.firstname} ">
 
             </a>
 
@@ -532,14 +537,11 @@
     const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
     const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
 
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', function() {
         scrollpos = window.scrollY;
 
-        if (scrollpos >= header_height) {
-            add_class_on_scroll()
-        } else {
-            remove_class_on_scroll()
-        }
+        if (scrollpos >= header_height) { add_class_on_scroll() }
+        else { remove_class_on_scroll() }
 
         console.log(scrollpos)
     })

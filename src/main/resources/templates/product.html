@@ -1,0 +1,492 @@
+<!doctype html>
+<html class="h-100" lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head th:include="fragments :: head">
+    <title id="pageTitle">Doanh mục sản phẩm</title>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+
+<nav id="navScroll" class="navbar navbar-expand-lg navbar-light" tabindex="0">
+    <div class="container">
+        <a class="navbar-brand pe-4 fs-4" href="/">
+            <img src="/img/icon.jpg" alt="favicon" height="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" aria-label="Brings you to the frontpage">
+                        Trang Chủ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mua-san-pham">
+                        Sản phẩm
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">
+                        Thông tin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutus">
+                        Về chúng tôi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+            <a sec:authorize="isAnonymous()" href="dang-nhap" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2"> Đăng Nhập
+            </a>
+            <a sec:authorize="isAuthenticated()" href="#" aria-label="Download this template"
+               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' +  ${session.firstname} ">
+
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="py-vh-5 w-100 overflow-hidden" id="services">
+        <section style="background-color: #eee;">
+            <div class="text-center container py-5">
+                <h4 class="mt-4 mb-5"><strong>Danh sách các sản phẩm</strong></h4>
+                <!--Row 1-->
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://images.fpt.shop/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com/images/product/2022/09/00005585-chi-nha-khoa-oral-b-4201-6328_large.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-primary ms-2">Chỉ nha khoa</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Chỉ nha khoa Oral-B Essential Floss</h5>
+                                </a>
+                                <h6 class="mb-3">50.000đ /Cuộn</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img src="https://cf.shopee.vn/file/80d6627aef572b86227add2b9335b2b5" class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-primary ms-2">Chỉ nha khoa</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Tăm chỉ nha khoa Okamura Nhật Bản (Bịch 50 cây/90
+                                        cây) </h5>
+                                </a>
+                                <h6 class="mb-3">₫21.500 - ₫33.000</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2491/77593/bhx/ban-chai-danh-rang-p-s-bao-ve-1-2-3-giup-chai-sach-hieu-qua-202211050938399860.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">Bàn chải</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Bàn chải đánh răng P/S Bảo vệ 1 2 3 giúp chải sạch hiệu
+                                        quả</h5>
+                                </a>
+
+                                <h6 class="mb-3">7.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Row 2-->
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2491/86587/bhx/bcdr-oral-b-easy-clean-mem-vi-1-2-org.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">Bàn chải</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Bàn chải đánh răng Oral-B đầu tròn Easy Clean</h5>
+                                </a>
+                                <h6 class="mb-3">13.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2491/78373/bhx/ban-chai-danh-rang-colgate-mem-manh-sach-sau-hieu-qua-202211051005242672.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">Bàn chải</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Bàn chải đánh răng Colgate mềm mảnh</h5>
+                                </a>
+                                <h6 class="mb-3">20.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2491/194615/bhx/ban-chai-danh-rang-colgate-flex-clean-charcoal-2-org.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">Bàn chải</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Bàn chải đánh răng Colgate Flex Clean Charcoal</h5>
+                                </a>
+
+                                <h6 class="mb-3">52.500₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Row 3-->
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2491/232176/bhx/bo-3-ban-chai-danh-rang-p-s-than-bac-khang-khuan-999-voi-long-to-sieu-manh-202201241632578175.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">Bàn chải</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Bộ 3 bàn chải đánh răng P/S than bạc</h5>
+                                </a>
+                                <h6 class="mb-3">58.500₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2491/218007/bhx/bo-2-ban-chai-danh-rang-p-s-muoi-tre-sieu-mem-202201241655326811.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">Bàn chải</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Bộ 2 bàn chải đánh răng P/S Muối tre</h5>
+                                </a>
+                                <h6 class="mb-3">40.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2491/240509/bhx/bo-3-ban-chai-danh-rang-p-s-muoi-tre-tu-nhien-giup-lam-trang-rang-va-cham-soc-nuou-202201241633409897.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">Bàn chải</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Bộ 3 bàn chải đánh răng P/S Muối tre</h5>
+                                </a>
+
+                                <h6 class="mb-3">63.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Row 4-->
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2491/102686/bhx/ban-chai-danh-rang-p-s-khang-khuan-than-bac-2-cay-2-org.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">Bàn chải</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Bộ 2 bàn chải đánh răng P/S kháng khuẩn charcoal</h5>
+                                </a>
+                                <h6 class="mb-3">57.500₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2491/276481/bhx/combo-2-ban-chai-danh-rang-p-s-va-kem-danh-rang-p-s-baking-soda-202209131122344849.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">Bàn chải</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Combo 2 bàn chải đánh răng P/S và kem đánh răng</h5>
+                                </a>
+                                <h6 class="mb-3">65.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2446/238492/bhx/kem-danh-rang-closeup-trang-sang-tu-nhien-230g-202105252229032310.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-info ms-2">Kem đánh răng</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3"> Kem đánh răng Closeup trắng răng</h5>
+                                </a>
+
+                                <h6 class="mb-3">51.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Row 5-->
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2446/199774/bhx/kem-danh-rang-p-s-bao-ve-123-than-hoat-tinh-230g-202201241628275679.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-info ms-2">Kem đánh răng</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Kem đánh răng P/S bảo vệ 123 than hoạt tính</h5>
+                                </a>
+                                <h6 class="mb-3">30.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2446/218013/bhx/kem-danh-rang-sensodyne-rapid-action-100g-202001150947082787.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-info ms-2">Kem đánh răng</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Kem đánh răng P/S bảo vệ 123 than hoạt tính Kem đánh
+                                        răng Sensodyne Rapid Action 100g</h5>
+                                </a>
+                                <h6 class="mb-3">97.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                 data-mdb-ripple-color="light">
+                                <img
+                                        src="https://cdn.tgdd.vn/Products/Images/2446/78362/bhx/kem-danh-rang-colgate-maxfresh-huong-bac-ha-180g-202207201618000694.jpg"
+                                        class="w-100"/>
+                                <a href="#!">
+                                    <div class="mask">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-info ms-2">Kem đánh răng</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                 <a href="/mua-san-pham" class="text-reset">
+                                    <h5 class="card-title mb-3">Kem đánh răng Colgate MaxFresh hương bạc hà 180g</h5>
+                                </a>
+                                <h6 class="mb-3">38.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+</main>
+
+<footer th:replace="fragments :: footer">
+
+</footer>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/aos.js"></script>
+</body>
+</html>

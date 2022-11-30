@@ -26,8 +26,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/mua-san-pham">
+                    <a class="nav-link" href="/san-pham">
                         Sản phẩm
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mua-san-pham">
+                        Mua hàng
                     </a>
                 </li>
                 <li class="nav-item">
@@ -51,7 +56,7 @@
                class="link-dark pb-1 link-fancy me-2"> Đăng Nhập
             </a>
             <a sec:authorize="isAuthenticated()" href="#" aria-label="Download this template"
-               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' + ${lastname} ">
+               class="link-dark pb-1 link-fancy me-2" th:text="'Xin chào ' + ${session.firstname} ">
 
             </a>
 
@@ -179,32 +184,7 @@
 
 <script src="/js/bootstrap.bundle.min.js"></script>
 <script src="/js/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 800, // values from 0 to 3000, with step 50ms
-    });
-</script>
 
-<script>
-    let scrollpos = window.scrollY
-    const header = document.querySelector(".navbar")
-    const header_height = header.offsetHeight
-
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
-
-    window.addEventListener('scroll', function () {
-        scrollpos = window.scrollY;
-
-        if (scrollpos >= header_height) {
-            add_class_on_scroll()
-        } else {
-            remove_class_on_scroll()
-        }
-
-        console.log(scrollpos)
-    })
-</script>
 
 </body>
 </html>

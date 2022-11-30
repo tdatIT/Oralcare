@@ -37,10 +37,6 @@ public class OrderController {
     public String getOrderPage(ModelMap modelMap) {
         Authentication authentication = SecurityContextHolder
                 .getContext().getAuthentication();
-        if (!(authentication instanceof AnonymousAuthenticationToken)) {
-            String lastname = ((CustomUserDetails) authentication.getPrincipal()).getLastName();
-            modelMap.addAttribute("lastname", lastname);
-        }
         modelMap.addAttribute("count", VariableScope.count_request);
         return "order-product";
     }

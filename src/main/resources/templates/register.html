@@ -19,7 +19,7 @@
           <h1>Đăng ký thông tin tài khoản</h1>
           <form class="row mt-5 mb-5" id="register-form" action="/dang-ky" method="post">
             <div class="col-12">
-              <div class="mb-3">
+              <div class="mb-3" th:if="${(param.error != null) and (param.error[0] == 'true')}">
                 <div class="text-warning" id="alert-register">* Đăng ký tài khoản không thành công</div>
               </div>
               <div class="mb-3">
@@ -76,7 +76,7 @@
               <div class="mb-3 form-check py-3">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                 <label class="form-check-label" for="exampleCheck1">Bạn đã đồng ý các</strong> chính sách người dùng của
-                  dự án cúng mình.</label>
+                  dự án chúng mình.</label>
               </div>
               <button type="submit" class="btn btn-primary btn-xl" id="submit-form-register">Đăng ký</button>
             </div>

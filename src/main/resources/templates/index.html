@@ -66,18 +66,19 @@
 <main>
     <div class="w-100 overflow-hidden bg-gray-100" id="top">
         <div class="container position-relative">
-            <div class="banner-index col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left"
+            <div class="banner-index col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover"
+                 data-aos="fade-left"
                  style="background-image: url(img/main-banner-v1.jpg);">
             </div>
 
-                <div class="col-lg-7 py-vh-6 col-xs-12 position-relative" data-aos="fade-right">
-                    <h1 class="display-1 fw-bold mt-5 title-oralcare">Your smile<br> Your life
-                    </h1>
-                    <p class="lead">Xây dựng cộng đồng có ý thức cao <br>trong việc chăm sóc sức khỏe răng miệng
-                        .</p>
-                    <a href="#project" class="btn btn-scroll btn-xl shadow me-3 rounded-0 my-5">Kéo xuống để khám
-                        phá</a>
-                </div>
+            <div class="col-lg-7 py-vh-6 col-xs-12 position-relative" data-aos="fade-right">
+                <h1 class="display-1 fw-bold mt-5 title-oralcare">Your smile<br> Your life
+                </h1>
+                <p class="lead">Xây dựng cộng đồng có ý thức cao <br>trong việc chăm sóc sức khỏe răng miệng
+                    .</p>
+                <a href="#project" class="btn btn-scroll btn-xl shadow me-3 rounded-0 my-5">Kéo xuống để khám
+                    phá</a>
+            </div>
 
         </div>
     </div>
@@ -88,7 +89,7 @@
                 <div class="col-lg-8" data-aos="fade-down">
                     <h2 class="display-6">Okay, có ba lý do mà chúng tôi tự hào khi mang đến cho bạn! Bật mí, mọi người
                         thường
-                        nói “Bất quá tam” và chúng tôi cũng nghĩ rằng ba là một số lượng hợp lý tốt của những những điều
+                        nói “Bất quá tam” và chúng tôi cũng nghĩ rằng ba là một số lượng hợp lý của những những điều
                         tốt đẹp.
                     </h2>
                 </div>
@@ -96,8 +97,7 @@
             <div class="row d-flex align-items-center">
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <span class="h5 fw-lighter">01.</span>
-                    <h3 class="py-5 border-top border-dark">Sản phẩm chúng tôi mang lại là thiết yếu và vừa vặn trong
-                        những nhu
+                    <h3 class="py-5 border-top border-dark">Sản phẩm chúng tôi mang lại là thiết yếu và vừa vặn cho nhu
                         cầu trong việc chăm sóc nụ cười của bạn.</p>
 
                 </div>
@@ -201,7 +201,7 @@
                         </div>
 
                         <div class="col-md-2 person" data-aos="fade-up" data-aos-delay="800">
-                            <p>Trần Lê Minh Khoa<br>SV Răng Hàm Mặ<br>ĐH Y Dược Cần Thơ</p>
+                            <p>Trần Lê Minh Khoa<br>SV Răng Hàm Mặt<br>ĐH Y Dược Cần Thơ</p>
                             <hr>
                             <img src="img/person-5.jpg" class="rounded img-fluid" alt="nice gallery image"
                                  width="512" height="512">
@@ -452,7 +452,8 @@
                                         </svg>
                                     </div>
                                     <blockquote class="blockquote">
-                                        <p>"Xã hội càng phát triển thì chúng ta càng chú trọng đến cái đẹp nhiều hơn..."</p>
+                                        <p>"Xã hội càng phát triển thì chúng ta càng chú trọng đến cái đẹp nhiều
+                                            hơn..."</p>
                                     </blockquote>
                                     <div class="d-flex justify-content-between border-top pt-3">
                                         <div>
@@ -537,11 +538,14 @@
     const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
     const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         scrollpos = window.scrollY;
 
-        if (scrollpos >= header_height) { add_class_on_scroll() }
-        else { remove_class_on_scroll() }
+        if (scrollpos >= header_height) {
+            add_class_on_scroll()
+        } else {
+            remove_class_on_scroll()
+        }
 
         console.log(scrollpos)
     })

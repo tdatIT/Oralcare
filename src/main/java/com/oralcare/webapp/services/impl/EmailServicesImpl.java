@@ -55,7 +55,7 @@ public class EmailServicesImpl implements EmailService {
     public String replyOrderMail(Order order, String name, String email) {
         EmailDetails details = new EmailDetails();
 
-        EmailOrder emailOrder = new EmailOrder(order, name);
+        EmailOrder emailOrder = new EmailOrder(order, name, email);
         try {
             // Creating a simple mail message
             MimeMessage mimeMessage

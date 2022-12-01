@@ -1,6 +1,5 @@
 package com.oralcare.webapp.controller;
 
-import com.oralcare.webapp.model.CustomUserDetails;
 import com.oralcare.webapp.model.Order;
 import com.oralcare.webapp.model.OrderItems;
 import com.oralcare.webapp.model.User;
@@ -11,7 +10,6 @@ import com.oralcare.webapp.variable.VariableScope;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -89,7 +87,7 @@ public class OrderController {
             order.setAmount(amount);
             //Add items in to order and info
             order.setOrderItemsByOrderId(items);
-            if (orderService.insertOrder(order, user.getLastname(), user.getEmail())) {
+            if (orderService.insertOrder(order, user.getFirstname(),user.getEmail())){
                 return new ResponseEntity(HttpStatus.OK);
             }
         }
